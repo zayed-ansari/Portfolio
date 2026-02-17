@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zayed Ansari - ML Engineer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Zayed Ansari</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         * {
@@ -14,31 +14,30 @@
         }
 
         :root {
-            --bg: #0a0a0a;
-            --surface: #151515;
             --border: #252525;
-            --text: #e4e4e7;
-            --text-dim: #a1a1aa;
-            --accent: #3b82f6;
-            --accent-hover: #2563eb;
+            --bg: #06060a;
+            --surface: #0f0f13;
+            --muted: #a6b1c8;
+            --accent: #b50798;
+            --accent-2: #7c4dff;
             --success: #10b981;
+            --text: #e4e4e7;
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'JetBrains Mono', monospace;
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        /* Header */
         header {
             position: fixed;
             top: 0;
             width: 100%;
             background: rgba(10, 10, 10, 0.8);
-            backdrop-filter: blur(12px);
+            backdrop-filter: none;
             border-bottom: 1px solid var(--border);
             z-index: 1000;
         }
@@ -53,8 +52,9 @@
         }
 
         .logo {
+            font-family: 'JetBrains Mono', monospace;
             font-size: 2.30rem;
-            font-weight: 600;
+            font-weight: 700;
             letter-spacing: -0.025em;
         }
 
@@ -65,20 +65,16 @@
         }
 
         .nav-links a {
+            font-family: 'JetBrains Mono', monospace;
             color: var(--text-dim);
             text-decoration: none;
             font-size: 0.95rem;
             transition: color 0.2s;
         }
 
-        .nav-links a:hover {
-            color: var(--text);
-        }
+        .nav-links a:hover { color: var(--text); }
 
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-        }
+        .social-icons { display: flex; gap: 1rem; }
 
         .social-icons a {
             color: var(--text-dim);
@@ -86,20 +82,15 @@
             transition: color 0.2s;
         }
 
-        .social-icons a:hover {
-            color: var(--accent);
-        }
+        .social-icons a:hover { color: var(--accent); }
 
-        /* Hero */
         .hero {
             max-width: 1280px;
             margin: 0 auto;
             padding: 10rem 2rem 6rem;
         }
 
-        .hero-content {
-            max-width: 720px;
-        }
+        .hero-content { max-width: 720px; }
 
         .hero-badge {
             display: inline-flex;
@@ -127,15 +118,24 @@
         }
 
         h1 {
+            font-family: 'JetBrains Mono', monospace;
             font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 700;
+            font-weight: 800;
             line-height: 1.1;
             margin-bottom: 1.5rem;
-            letter-spacing: -0.02em;
+            letter-spacing: -0.06em;
+        }
+
+        h2 {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        h3 {
+            font-family: 'JetBrains Mono', monospace;
         }
 
         .gradient-text {
-            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            background: linear-gradient(165deg, #26057f 0%, #e3159f 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -157,6 +157,7 @@
         .btn {
             padding: 0.875rem 1.75rem;
             border-radius: 0.5rem;
+            font-family: 'JetBrains Mono', monospace;
             font-size: 1rem;
             font-weight: 500;
             text-decoration: none;
@@ -173,7 +174,6 @@
         }
 
         .btn-primary:hover {
-            background: var(--accent-hover);
             transform: translateY(-2px);
         }
 
@@ -188,19 +188,17 @@
             color: var(--accent);
         }
 
-        /* Section */
         section {
             max-width: 1280px;
             margin: 0 auto;
             padding: 6rem 2rem;
         }
 
-        .section-header {
-            margin-bottom: 3rem;
-        }
+        .section-header { margin-bottom: 3rem; }
 
         .section-label {
             color: var(--accent);
+            font-family: 'JetBrains Mono', monospace;
             font-size: 0.875rem;
             font-weight: 600;
             text-transform: uppercase;
@@ -209,12 +207,12 @@
         }
 
         .section-title {
+            font-family: 'JetBrains Mono', monospace;
             font-size: clamp(2rem, 4vw, 2.5rem);
             font-weight: 700;
             letter-spacing: -0.02em;
         }
 
-        /* Projects Grid */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
@@ -223,11 +221,7 @@
 
         .project-card {
             background: rgba(21, 21, 21, 0.6);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-            /* border: 1px solid var(--border);
-            border-radius: 1rem; */
+            border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 2rem;
             transition: all 0.3s;
             cursor: pointer;
@@ -257,10 +251,7 @@
             font-size: 1.5rem;
         }
 
-        .project-links {
-            display: flex;
-            gap: 0.75rem;
-        }
+        .project-links { display: flex; gap: 0.75rem; }
 
         .icon-link {
             width: 32px;
@@ -305,6 +296,7 @@
             border-radius: 0.375rem;
             font-size: 0.8rem;
             color: var(--accent);
+            font-family: 'JetBrains Mono', monospace;
         }
 
         .metrics {
@@ -314,12 +306,10 @@
             border-top: 1px solid var(--border);
         }
 
-        .metric {
-            display: flex;
-            flex-direction: column;
-        }
+        .metric { display: flex; flex-direction: column; }
 
         .metric-value {
+            font-family: 'JetBrains Mono', monospace;
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--success);
@@ -330,7 +320,6 @@
             color: var(--text-dim);
         }
 
-        /* Skills */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -352,14 +341,9 @@
             gap: 0.75rem;
         }
 
-        .skill-card i {
-            color: var(--accent);
-            font-size: 1.5rem;
-        }
+        .skill-card i { color: var(--accent); font-size: 1.5rem; }
 
-        .skill-list {
-            list-style: none;
-        }
+        .skill-list { list-style: none; }
 
         .skill-list li {
             padding: 0.5rem 0;
@@ -458,7 +442,86 @@
     box-shadow: 0 4px 12px rgba(59,130,246,0.25);
 }
 
-        /* Contact */
+        .experience-timeline {
+            border-left: 2px solid var(--border);
+            padding-left: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .exp-item { position: relative; }
+
+        .exp-item::before {
+            content: "";
+            position: absolute;
+            left: -2.7rem;
+            top: 0.4rem;
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .exp-role {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.35rem;
+            font-weight: 600;
+        }
+
+        .exp-company { color: var(--accent); margin-bottom: 0.5rem; }
+
+        .exp-duration {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            margin-bottom: 0.75rem;
+        }
+
+        .exp-desc {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 0.8rem;
+        }
+
+        .exp-desc li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            margin-bottom: 0.65rem;
+            color: var(--text-dim);
+        }
+
+        .exp-desc li::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background: #d70097;
+            border-radius: 50%;
+            box-shadow: 0 0 6px #d70097;
+            margin-top: 0.55rem;
+            flex-shrink: 0;
+        }
+
+        .exp-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            padding: 0.35rem 0.75rem;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid var(--border);
+            letter-spacing: 0.05em;
+            transition: all 0.25s ease;
+            cursor: default;
+            padding-top: 0.3rem;
+        }
+
+        .exp-tag:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59,130,246,0.25);
+        }
+
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -474,9 +537,7 @@
             transition: all 0.2s;
         }
 
-        .contact-card:hover {
-            border-color: var(--accent);
-        }
+        .contact-card:hover { border-color: var(--accent); }
 
         .contact-card i {
             font-size: 2rem;
@@ -495,20 +556,16 @@
             transition: color 0.2s;
         }
 
-        .contact-card a:hover {
-            color: var(--accent);
-        }
+        .contact-card a:hover { color: var(--accent); }
 
-        /* Footer */
         footer {
             border-top: 1px solid var(--border);
             padding: 3rem 2rem;
             text-align: center;
             color: var(--text-dim);
+            font-family: 'JetBrains Mono', monospace;
         }
 
-        
-        /* Mobile */
         .mobile-menu-btn {
             display: none;
             background: none;
@@ -518,52 +575,225 @@
             cursor: pointer;
         }
 
+        /* ── ABOUT SECTION ── */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 4rem;
+            align-items: start;
+            margin-bottom: 4rem;
+        }
+
+        .about-text p {
+            color: var(--muted);
+            margin-bottom: 1.25rem;
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .stat-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            transition: border-color 0.2s;
+        }
+
+        .stat-card:hover { border-color: var(--accent); }
+
+        .stat-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--muted);
+        }
+
+        /* ── CURRENTLY EXPLORING ── */
+        .exploring-section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 1.25rem;
+            padding: 2.5rem;
+        }
+
+        .exploring-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .exploring-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .exploring-card {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            transition: border-color 0.2s;
+        }
+
+        .exploring-card:hover { border-color: var(--accent); }
+
+        .exploring-card i {
+            color: var(--accent);
+            font-size: 1.25rem;
+            margin-top: 0.15rem;
+            flex-shrink: 0;
+        }
+
+        .exploring-card h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .exploring-card p {
+            font-size: 0.82rem;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        /* ── PRIVATE BADGE ── */
+        .private-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.72rem;
+            color: var(--muted);
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--border);
+            border-radius: 0.4rem;
+            padding: 0.25rem 0.6rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* ── METRIC NOTE ── */
+        .metric-note {
+            display: block;
+            font-size: 0.7rem;
+            color: var(--muted);
+            font-weight: 400;
+            margin-top: 0.1rem;
+        }
+
+        /* ── BLOG SECTION ── */
+        .blog-coming-soon {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 1.25rem;
+            padding: 4rem 3rem;
+            text-align: center;
+        }
+
+        .blog-icon {
+            width: 72px;
+            height: 72px;
+            background: rgba(181, 7, 152, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.75rem;
+            color: var(--accent);
+        }
+
+        .blog-coming-soon h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .blog-coming-soon > p {
+            color: var(--muted);
+            max-width: 520px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+
+        .blog-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .blog-topic-tag {
+            padding: 0.5rem 1rem;
+            background: rgba(181, 7, 152, 0.08);
+            border: 1px solid rgba(181, 7, 152, 0.25);
+            border-radius: 9999px;
+            font-size: 0.82rem;
+            color: var(--text);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .blog-cta-text {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .inline-link {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .inline-link:hover { text-decoration: underline; }
+
         @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .social-icons {
-                display: none;
-            }
-
-            .hero {
-                padding: 8rem 1.5rem 4rem;
-            }
-
-            section {
-                padding: 4rem 1.5rem;
-            }
-
-            .projects-grid,
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-actions {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .btn {
-                justify-content: center;
-            }
+            .mobile-menu-btn { display: block; }
+            .nav-links { display: none; }
+            .social-icons { display: none; }
+            .hero { padding: 8rem 1.5rem 4rem; }
+            section { padding: 4rem 1.5rem; }
+            .projects-grid, .skills-grid { grid-template-columns: 1fr; }
+            .hero-actions { flex-direction: column; align-items: stretch; }
+            .btn { justify-content: center; }
+            .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .about-stats { grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
+            .blog-coming-soon { padding: 2.5rem 1.5rem; }
         }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">Zayed Ansari</div>
+            <div class="logo">ZaYeD</div>
             <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
             <div class="nav-links">
+                <a href="#about">About</a>
                 <a href="#projects">Projects</a>
                 <a href="#experience">Experience</a>
                 <a href="#skills">Skills</a>
+                <a href="#blog">Blog</a>
                 <a href="#contact">Contact</a>
             </div>
             <div class="social-icons">
@@ -577,11 +807,14 @@
     <section class="hero">
         <div class="hero-content">
            
-            <h1>Building <span class="gradient-text">LLM Applications</span> & Production ML Systems</h1>
+            <h1>I build <span class="gradient-text">production LLMs</span> & <span class="gradient-text">RAG systems</span> for real products</h1>
             <p>ML Engineer specializing in fine-tuning transformers, edge AI deployment, and RAG pipelines. Currently exploring agentic AI and vector databases.</p>
             <div class="hero-actions">
                 <a href="#projects" class="btn btn-primary">
                     View Projects <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="zayed_ansari_resume.pdf" download class="btn btn-secondary">
+                    <i class="fas fa-download"></i> Download Resume
                 </a>
                 <a href="#contact" class="btn btn-secondary">
                     <i class="fas fa-envelope"></i> Get in Touch
@@ -623,62 +856,146 @@
     </div>
 </section>
 
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div class="section-header">
+            <div class="section-label">Who I Am</div>
+            <h2 class="section-title">About Me</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>Hey, I'm Zayed :), an AI & Data Science student from Mumbai who's genuinely obsessed with building things that work, not just things that demo well.</p>
+                <p>I got into AI because I wanted to understand how machines actually learn, not just call an API and call it a day. That curiosity pushed me toward fine-tuning transformers, building RAG systems from scratch, and deploying models on edge hardware like Raspberry Pi real constraints, real tradeoffs.</p>
+            </div>
+            <div class="about-stats">
+                <div class="stat-card">
+                    <div class="stat-value">4+</div>
+                    <div class="stat-label">Projects Shipped</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">500K+</div>
+                    <div class="stat-label">Records Processed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">3+</div>
+                    <div class="stat-label">Models Deployed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">$35</div>
+                    <div class="stat-label">Cheapest Deploy</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Currently Exploring -->
+        <div class="exploring-section">
+            <div class="exploring-header">
+                <span class="status-dot"></span>
+                <span class="section-label" style="margin-bottom:0">Currently Exploring</span>
+            </div>
+            <div class="exploring-grid">
+                <div class="exploring-card">
+                    <i class="fas fa-robot"></i>
+                    <div>
+                        <h4>Agentic AI Systems</h4>
+                        <p>Building multi-step AI agents with LangGraph that can reason, plan, and act autonomously across tasks.</p>
+                    </div>
+                </div>
+                <div class="exploring-card">
+                    <i class="fas fa-database"></i>
+                    <div>
+                        <h4>Advanced Vector Databases</h4>
+                        <p>Going deeper into Pinecone and Weaviate for production-grade semantic search at scale.</p>
+                    </div>
+                </div>
+                <div class="exploring-card">
+                    <i class="fas fa-chart-line"></i>
+                    <div>
+                        <h4>MLOps & Experiment Tracking</h4>
+                        <p>Learning MLflow and Weights & Biases to bring proper experiment tracking into my ML workflow.</p>
+                    </div>
+                </div>
+                <div class="exploring-card">
+                    <i class="fas fa-pen-nib"></i>
+                    <div>
+                        <h4>Technical Writing</h4>
+                        <p>Documenting what I build — because the best engineers can explain their systems as well as they code them.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="section-header">
+            <div class="section-label">Career</div>
+            <h2 class="section-title">Experience</h2>
+        </div>
+        <div class="experience-timeline">
+            <div class="exp-item">
+                <div class="exp-role">Python Developer Intern</div>
+                <div class="exp-company"><i class="fas fa-briefcase company-icon"></i> Helo.ai by Vivaconnect — Mumbai, Maharashtra</div>
+                <div class="exp-duration">Jan 2026 – Present</div>
+                <ul class="exp-desc">
+                    <li>Developed PySpark behavioral profiling pipeline ("WHEN" model) with Docker deployment.</li>
+                    <li>Built Customer Data Platform using RFM features and K-Means clustering on 500K+ records.</li>
+                    <li>Engineered Python/PostgreSQL pipelines for churn risk and customer analytics.</li>
+                    <li>Trained ML models (Random Forest etc.) for churn and value scoring.</li>
+                </ul>
+                <div class="exp-tags">
+                    <span class="exp-tag">PYSPARK</span>
+                    <span class="exp-tag">MACHINE LEARNING</span>
+                    <span class="exp-tag">CUSTOMER ANALYTICS</span>
+                    <span class="exp-tag">DOCKER</span>
+                    <span class="exp-tag">POSTGRESQL</span>
+                    <span class="exp-tag">DATA PIPELINES</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="projects">
         <div class="section-header">
             <div class="section-label">Featured Work</div>
             <h2 class="section-title">Projects</h2>
         </div>
-
         <div class="projects-grid">
             <div class="project-card">
                 <div class="project-header">
-                    <div class="project-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
+                    <div class="project-icon"><i class="fas fa-database"></i></div>
                     <div class="project-links">
-                         <a href="https://github.com/zayed-ansari/RAG-project" target="_blank" class="icon-link">
-                <i class="fab fa-github"></i>
-            </a>
-        
-                        </a>
-            
+                        <a href="https://github.com/zayed-ansari/RAG-project" target="_blank" class="icon-link"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
                 <h3>Multi-Document RAG System</h3>
-    <p>Production-ready Retrieval-Augmented Generation system enabling multi-document querying across PDFs with automatic source citations. Processes 27-page documents with sub-second response times and 90%+ answer relevance.</p>
-    <div class="tags">
-        <span class="tag">LangChain</span>
-        <span class="tag">ChromaDB</span>
-        <span class="tag">Gemini API</span>
-        <span class="tag">Streamlit</span>
-        <span class="tag">RAG</span>
-    </div>
-    <div class="metrics">
-        <div class="metric">
-            <div class="metric-value">90%+</div>
-            <div class="metric-label">Answer Relevance</div>
-        </div>
-        <div class="metric">
-            <div class="metric-value">40%</div>
-            <div class="metric-label">Coherence Improvement</div>
-        </div>
-    </div>
+                <p>Production-ready Retrieval-Augmented Generation system enabling multi-document querying across PDFs with automatic source citations. Processes 27-page documents with sub-second response times and 90%+ answer relevance.</p>
+                <div class="tags">
+                    <span class="tag">LangChain</span>
+                    <span class="tag">ChromaDB</span>
+                    <span class="tag">Gemini API</span>
+                    <span class="tag">Streamlit</span>
+                    <span class="tag">RAG</span>
+                </div>
+                <div class="metrics">
+                    <div class="metric">
+                        <div class="metric-value">90%+</div>
+                        <div class="metric-label">Answer Relevance <span class="metric-note">(via RAGAS eval)</span></div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">40%</div>
+                        <div class="metric-label">Coherence Improvement <span class="metric-note">(Ollama → Gemini)</span></div>
+                    </div>
+                </div>
             </div>
-            <div class="project-card">
-        <div class="project-header">
-            <div class="project-icon">
-                <i class="fas fa-feather"></i>
-            </div>
-            <div class="project-links">
-                <a href="https://github.com/zayed-ansari/sonnet-generator" target="_blank" class="icon-link">
-                    <i class="fab fa-github"></i>
-                     <a href="https://x.com/zayedansari2004/status/1918361359026188783" target="_blank" class="icon-link">
-                            <i class="fas fa-video"></i>
-                        </a>
-                </a>
-            </div>
-        </div>
 
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon"><i class="fas fa-feather"></i></div>
+                    <div class="project-links">
+                        <a href="https://github.com/zayed-ansari/sonnet-generator" target="_blank" class="icon-link"><i class="fab fa-github"></i></a>
+                        <a href="https://x.com/zayedansari2004/status/1918361359026188783" target="_blank" class="icon-link"><i class="fas fa-video"></i></a>
+                    </div>
+                </div>
                 <h3>Sonnet Generator</h3>
                 <p>Fine-tuned GPT-2 on Shakespeare's sonnets to generate real-time poetry with preserved meter and rhyme schemes. Engineered custom loss functions optimizing for poetic structure.</p>
                 <div class="tags">
@@ -691,24 +1008,24 @@
                 <div class="metrics">
                     <div class="metric">
                         <div class="metric-value">90%</div>
-                        <div class="metric-label">User Satisfaction</div>
+                        <div class="metric-label">User Satisfaction <span class="metric-note">(beta tester survey)</span></div>
                     </div>
                     <div class="metric">
                         <div class="metric-value">15%</div>
-                        <div class="metric-label">BLEU Improvement</div>
+                        <div class="metric-label">BLEU Improvement <span class="metric-note">(vs baseline GPT-2)</span></div>
                     </div>
                 </div>
             </div>
 
             <div class="project-card">
                 <div class="project-header">
-                    <div class="project-icon">
-                        <i class="fas fa-road"></i>
+                    <div class="project-icon"><i class="fas fa-road"></i></div>
+                    <div class="project-links">
+                        <span class="private-badge"><i class="fas fa-lock"></i> Collaborative · Code Private</span>
                     </div>
-                
                 </div>
                 <h3>Real-Time Pothole Detection</h3>
-                <p>Ensemble CNN (Xception + InceptionV3) for road condition monitoring. Deployed on Raspberry Pi for edge inference, demonstrating low-cost AI solution for infrastructure monitoring.</p>
+                <p>Contributed to an ensemble CNN (Xception + InceptionV3) for road condition monitoring. Deployed on Raspberry Pi for edge inference, demonstrating low-cost AI solution for infrastructure monitoring. My contributions focused on model optimization and edge deployment.</p>
                 <div class="tags">
                     <span class="tag">Computer Vision</span>
                     <span class="tag">Transfer Learning</span>
@@ -729,22 +1046,13 @@
             </div>
 
             <div class="project-card">
-        <div class="project-header">
-            <div class="project-icon">
-                <i class="fas fa-image"></i>
+                <div class="project-header">
+                    <div class="project-icon"><i class="fas fa-image"></i></div>
+                    <div class="project-links">
+                        <a href="https://github.com/zayed-ansari/Classify-153" target="_blank" class="icon-link"><i class="fab fa-github"></i></a>
+                        <a href="https://huggingface.co/spaces/zayed2004/Classify-153" target="_blank" class="icon-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
                 </div>
-                <div class="project-links">
-                <a href="https://github.com/zayed-ansari/Classify-153" target="_blank" class="icon-link">
-                    <i class="fab fa-github"></i>
-                
-                <a href="https://huggingface.co/spaces/zayed2004/Classify-153" target="_blank" class="icon-link">
-                    <i class="fas fa-external-link-alt"></i>
-                </a>
-                </a>
-            
-            </div>
-            
-        </div>
                 <h3>Classify-153</h3>
                 <p>Wildlife species classifier processing 10K+ images across 153 classes. Optimized with ONNX runtime for real-time inference. Includes Grad-CAM visualizations for model interpretability.</p>
                 <div class="tags">
@@ -773,7 +1081,6 @@
             <div class="section-label">Tech Stack</div>
             <h2 class="section-title">Skills & Technologies</h2>
         </div>
-
         <div class="skills-grid">
             <div class="skill-card">
                 <h3><i class="fas fa-brain"></i> Machine Learning</h3>
@@ -785,7 +1092,6 @@
                     <li>NLP & Text Generation</li>
                 </ul>
             </div>
-
             <div class="skill-card">
                 <h3><i class="fas fa-robot"></i> LLM & AI</h3>
                 <ul class="skill-list">
@@ -796,7 +1102,6 @@
                     <li>Model Optimization (LoRA, QLoRA)</li>
                 </ul>
             </div>
-
             <div class="skill-card">
                 <h3><i class="fas fa-tools"></i> MLOps & Deployment</h3>
                 <ul class="skill-list">
@@ -807,7 +1112,6 @@
                     <li>AWS Cloud Services</li>
                 </ul>
             </div>
-
             <div class="skill-card">
                 <h3><i class="fas fa-code"></i> Programming</h3>
                 <ul class="skill-list">
@@ -826,36 +1130,30 @@
             <div class="section-label">Get in Touch</div>
             <h2 class="section-title">Let's Connect</h2>
         </div>
-
         <div class="contact-grid">
             <div class="contact-card">
-               <a href="mailto:zayed.ansari04@gmail.com"> <i class="fas fa-envelope"></i>
-                <h3>Email</h3>
-                zayed.ansari04@gmail.com</a>
+                <a href="mailto:zayed.ansari04@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    zayed.ansari04@gmail.com
+                </a>
             </div>
-
             <div class="contact-card">
-               <a href="https://github.com/zayed-ansari" target="_blank"><i class="fab fa-github"></i>
-                <h3>GitHub</h3>
-                @zayed-ansari</a>
+                <a href="https://github.com/zayed-ansari" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    @zayed-ansari
+                </a>
             </div>
-
             <div class="contact-card">
-                <a href="https://x.com/zayedansari2004" target="_blank"><i class="fab fa-twitter"></i>
-                <h3>Twitter/X</h3>
-                @zayedansari2004</a>
+                <a href="https://x.com/zayedansari2004" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                    <h3>Twitter/X</h3>
+                    @zayedansari2004
+                </a>
             </div>
-
             <div class="contact-card">
-                <a href="https://linkedin.com/in/zayed-ansari-805a8525a" target="_blank"><i class="fab fa-linkedin"></i>
-                <h3>LinkedIn</h3>
-                Zayed Ansari</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2025 Zayed Ansari</p>
-    </footer>
-</body>
-</html>
+                <a href="https://linkedin.com/in/zayed-ansari-805a8525a" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    Zayed Ansari
