@@ -373,6 +373,90 @@
             content: '→';
             color: var(--accent);
         }
+        /* Experience Section */
+.experience-timeline {
+    border-left: 2px solid var(--border);
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.exp-item {
+    position: relative;
+}
+
+.exp-item::before {
+    content: "";
+    position: absolute;
+    left: -2.7rem;
+    top: 0.4rem;
+    width: 12px;
+    height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+}
+
+.exp-role {
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+.exp-company {
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.exp-duration {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    margin-bottom: 0.75rem;
+}
+
+.exp-desc {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.8rem;
+}
+
+.exp-desc li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-bottom: 0.65rem;
+    color: var(--text-dim);
+}
+
+.exp-desc li::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #4c00ff;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #4c00ff;
+    margin-top: 0.55rem;
+    flex-shrink: 0;
+}
+.exp-tag {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid var(--border);
+    letter-spacing: 0.05em;
+    transition: all 0.25s ease;
+    cursor: default;
+    /* margin-top: 1.5rem; */
+    padding-top: 0.3rem;
+
+}
+
+.exp-tag:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59,130,246,0.25);
+}
 
         /* Contact */
         .contact-grid {
@@ -478,6 +562,7 @@
             <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
             <div class="nav-links">
                 <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
                 <a href="#skills">Skills</a>
                 <a href="#contact">Contact</a>
             </div>
@@ -504,6 +589,39 @@
             </div>
         </div>
     </section>
+        <section id="experience">
+    <div class="section-header">
+        <div class="section-label">Career</div>
+        <h2 class="section-title">Experience</h2>
+    </div>
+
+    <div class="experience-timeline">
+
+        <!-- Internship -->
+        <div class="exp-item">
+            <div class="exp-role">Python Developer Intern</div>
+            <div class="exp-company"><i class="fas fa-briefcase company-icon"></i> Helo.ai by Vivaconnect — Mumbai, Maharashtra</div>
+            <div class="exp-duration">Jan 2026 – Present</div>
+
+            <ul class="exp-desc">
+                <li>Developed PySpark behavioral profiling pipeline (“WHEN” model) with Docker deployment.</li>
+                <li>Built Customer Data Platform using RFM features and K-Means clustering on 500K+ records.</li>
+                <li>Engineered Python/PostgreSQL pipelines for churn risk and customer analytics.</li>
+                <li>Trained ML models (Random Forest etc.) for churn and value scoring.</li>
+            </ul>
+            
+            <div class="exp-tags">
+    <span class="exp-tag">PYSPARK</span>
+    <span class="exp-tag">MACHINE LEARNING</span>
+    <span class="exp-tag">CUSTOMER ANALYTICS</span>
+    <span class="exp-tag">DOCKER</span>
+    <span class="exp-tag">POSTGRESQL</span>
+    <span class="exp-tag">DATA PIPELINES</span>
+</div>
+        </div>
+
+    </div>
+</section>
 
     <section id="projects">
         <div class="section-header">
